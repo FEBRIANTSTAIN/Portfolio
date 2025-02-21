@@ -103,6 +103,7 @@ nav{
     padding-inline: 9vw;
     transition: .3s;
     z-index: 100;
+    overflow-x: hidden;
 }
 .nav-logo{
    position: relative;
