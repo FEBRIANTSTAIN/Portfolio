@@ -35,6 +35,8 @@
 
 html{
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -88,9 +90,12 @@ body{
     position: relative;
     max-width: 100%;
     padding-inline: 10px;
+    overflow-x: hidden;
 }
 
-
+*{
+    box-sizing: border-box;
+}
 
 nav {
     position: fixed;
