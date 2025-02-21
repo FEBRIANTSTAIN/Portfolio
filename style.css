@@ -594,7 +594,7 @@ footer{
         flex-direction: column;
     }
     .nav-menu-btn{
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
     }
