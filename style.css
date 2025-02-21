@@ -11,7 +11,7 @@
     will-change: transform;
 }
 :root{
-    --body-color: #0e98fa;
+    --body-color: #2f93da;
     --color-white: rgb(255, 255, 255);
 
     --text-color-second: rgb(255, 255, 255);
@@ -79,6 +79,7 @@ i{
 body{
     background: var(--body-color);
     overflow-x: hidden;
+    width: 100%;
 }
 .container{
     width: 100%;
@@ -589,58 +590,11 @@ footer{
         align-items: center;
         justify-content: center;
     }
-    .featured-box{
-        flex-direction: column;
-        justify-content: center;
-        height: 100vh;
-    }
-    .featured-text{
-        width: 100%;
-        order: 2;
-        justify-content: center;
-        align-content: flex-start;
-        min-height: 60vh;
-    }
-    .social_icons{
-        margin-top: 2em;
-    }
-    .featured-image{
-        order: 1;
-        justify-content: center;
-        min-height: 150px;
-        width: 100%;
-        margin-top: 65px;
-    }
-    .image, .image img{
-        width: 150px;
-        height: 150px;
-    }
-    .row{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 50px;
-    }
-    .col{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    .about-info, .contact-info{
-        width: 100%;
-    }
-    .project-container{
-        justify-content: center;
-    }
-    .project-box{
-        width: 80%;
-    }
-
+    /* ... (kode CSS lainnya) ... */
 }
 
 
-
-@media only screen and (max-width: 540px){
+@media only screen and (max-width: 540px) {
     .featured-name{
         font-size: 40px;
     }
@@ -653,7 +607,4 @@ footer{
     .input-field{
         width: 100%;
     }
-
-    
 }
-
