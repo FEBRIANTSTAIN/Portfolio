@@ -245,13 +245,15 @@
             flex-direction: column;
             align-items: center;
             border: 1px solid #374151; 
+            position: relative; 
+            z-index: 1; 
         }
 
         .dino-game-container h4 {
             color: white;
             font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 0.5rem; /* Kurangi margin bawah */
+            margin-bottom: 0.5rem; 
         }
         
         .dino-game-container p.instructions {
@@ -261,45 +263,56 @@
         }
 
         #dinoGameCanvas {
-            background-color: #000; /* Latar belakang hitam untuk game */
-            display: block; /* Menghilangkan margin ekstra */
+            background-color: #000; 
+            display: block; 
             border-radius: 0.5rem;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            outline: none; /* Hilangkan outline fokus */
+            outline: none; 
+            touch-action: manipulation; 
+            position: relative; 
+            z-index: 10; 
+            border: 2px solid transparent; 
+            transition: border-color 0.2s ease;
+        }
+
+        #dinoGameCanvas:hover, #dinoGameCanvas:focus {
+            border-color: #6366F1; 
         }
         
         /* Untuk tampilan mobile, canvas mungkin perlu ukuran yang lebih spesifik */
         @media (max-width: 767px) {
             #dinoGameCanvas {
-                width: 280px; /* Lebar yang lebih kecil untuk mobile */
-                height: 80px; /* Tinggi yang lebih kecil untuk mobile */
-                aspect-ratio: 280 / 80; /* Pertahankan rasio aspek mobile */
+                width: 280px; 
+                height: 80px; 
+                aspect-ratio: 280 / 80; 
             }
             .dino-game-container .mobile-jump-button {
-                display: block; /* Tampilkan tombol jump di mobile */
+                display: block; 
+                touch-action: manipulation; 
+                position: relative; 
+                z-index: 10; 
             }
             .dino-game-container p.instructions {
-                display: none; /* Sembunyikan instruksi spasi di mobile */
+                display: none; 
             }
         }
         
         /* Untuk desktop, canvas akan mengisi ruang yang tersedia */
         @media (min-width: 768px) {
             #dinoGameCanvas {
-                width: 700px; /* Lebar yang lebih besar untuk desktop */
-                height: 150px; /* Tinggi yang lebih besar untuk desktop */
-                aspect-ratio: 700 / 150; /* Pertahankan rasio aspek desktop */
+                width: 700px; 
+                height: 150px; 
+                aspect-ratio: 700 / 150; 
             }
             .dino-game-container {
-                /* Di desktop, dino game akan mengambil seluruh lebar kolomnya */
-                grid-column: span 2; /* Agar canvas mengisi 2 kolom jika di dalam grid 2 kolom */
-                margin-top: 4rem; /* Sesuaikan margin atas agar tidak terlalu dekat dengan form */
+                grid-column: span 2; 
+                margin-top: 4rem; 
             }
             .md\:grid.md\:grid-cols-2.md\:gap-12 {
-                grid-template-rows: auto auto; /* Sesuaikan baris untuk menampung game di bawah */
+                grid-template-rows: auto auto; 
             }
             .dino-game-container .mobile-jump-button {
-                display: none; /* Sembunyikan tombol jump di desktop */
+                display: none; 
             }
         }
     </style>
@@ -307,7 +320,7 @@
 <body class="bg-gray-900 font-poppins antialiased">
     <div id="splash-screen">
         <p>Welcome to my <span class="gradient-text">Portfolio</span></p>
-        <a href="https://github.com/FEBRIANTSTAIN" target="_blank" class="github-icon">
+        <a href="https://github.com/FEBRIANTSTAIN" target="Https://github.com/FEBRIANTSTAIN" class="github-icon">
             <i class="uil uil-github-alt"></i>
         </a>
     </div>
@@ -343,7 +356,7 @@
                     <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300 w-full px-4 py-2 rounded-md hover:bg-gray-700" onclick="closeMobileMenu()">Projects</a>
                     <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300 w-full px-4 py-2 rounded-md hover:bg-gray-700" onclick="closeMobileMenu()">Contact</a>
                     <button class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded-full transition-colors duration-300 mt-4">
-                        Download CV <i class="uil uil-download-alt ml-2"></i>
+                        Download CV <i class="uil uil-download-alt ml-2 "></i>
                     </button>
                 </div>
             </div>
@@ -360,18 +373,18 @@
                 
                 <div class="md:w-1/2 md:pr-16 text-center md:text-left order-2 md:order-1">
                     <span class="bg-indigo-500 text-white py-1 px-3 rounded-full text-sm font-medium mb-4 inline-block">Hello, I'm</span>
-                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Febriant <span class="text-indigo-500">Elshandy</span></h1>
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Febriant <span class="text-indigo-500">Elsandy</span></h1>
                     <p class="text-lg text-gray-300 mb-8">A passionate student exploring the world of web development and design, eager to craft innovative and user-centric digital experiences.</p>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-center md:justify-start gap-4">
                         <button class="bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-6 rounded-full transition-colors duration-300">About Me</button>
-                        <button class="inline-flex items-center bg-transparent border border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white font-medium py-3 px-6 rounded-full transition-colors duration-300">
-                            Download CV <i class="uil uil-download-alt ml-2"></i>
+                        <button class="inline-flex items-center bg-transparent border border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white font-medium py-3 px-6 rounded-full transition-colors duration-300 ">
+                            Download CV <i class="uil uil-download-alt ml-2 ite"></i>
                         </button>
                     </div>
                     <div class="flex justify-center md:justify-start mt-10 space-x-4">
                         <a href="https://www.instagram.com/bbriannt_/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="uil uil-instagram text-xl"></i></a>
-                        <a href="https://www.linkedin.com/in/febriant-sam-antonie-putra-elshandy-417901339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="uil uil-linkedin-alt text-xl"></i></a>
                         <a href="https://github.com/FEBRIANTSTAIN" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="uil uil-github-alt text-xl"></i></a>
+                        <a href="https://www.linkedin.com/in/febriant-sam-antonie-putra-elshandy-417901339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="uil uil-linkedin-alt text-xl"></i></a>
                     </div>
                 </div>
             </section>
@@ -519,7 +532,7 @@
                     </div>
                     <div class="dino-game-container md:col-span-2"> 
                         <h4>Feeling bored? Play a game!</h4>
-                        <p class="instructions">Click on the game area or press **SPACE** to jump/start.</p>
+                        <p class="instructions">Tap on the game area or press **SPACE** to jump/start.</p>
                         <canvas id="dinoGameCanvas"></canvas>
                         <button id="mobileJumpButton" class="mobile-jump-button mt-4 bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-6 rounded-full hidden">JUMP / START</button>
                     </div>
@@ -531,8 +544,8 @@
             <p>&copy; 2024 Febriant. All rights reserved.</p>
             <div class="mt-4 space-x-4">
                 <a href="https://www.instagram.com/bbriannt_/" target="_blank" class="hover:text-white"><i class="uil uil-instagram text-lg"></i></a>
-                <a href="https://www.linkedin.com/in/febriant-sam-antonie-putra-elshandy-417901339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="hover:text-white"><i class="uil uil-linkedin-alt text-lg"></i></a>
                 <a href="https://github.com/FEBRIANTSTAIN" target="_blank" class="hover:text-white"><i class="uil uil-github-alt text-lg"></i></a>
+                <a href="https://www.linkedin.com/in/febriant-sam-antonie-putra-elshandy-417901339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="hover:text-white"><i class="uil uil-linkedin-alt text-lg"></i></a>
             </div>
         </footer>
     </div>
@@ -543,7 +556,6 @@
     <script>
         // --- Inisialisasi Particles.js ---
         document.addEventListener('DOMContentLoaded', () => {
-            // Pastikan particlesjs-config.json ada di root folder atau sesuaikan path
             particlesJS.load('particles-js', 'particlesjs-config.json', function() {
                 console.log('callback - particles.js config loaded');
             });
@@ -570,7 +582,6 @@
             delay: 100
         });
 
-        // Apply ScrollReveal animations to specific elements
         ScrollReveal().reveal('.featured-text, .featured-image, .top-header',{ delay: 100 });
         ScrollReveal().reveal('.about-info',{ delay: 200, origin: 'left' });
         ScrollReveal().reveal('.skills-box',{ delay: 200, origin: 'right' });
@@ -579,231 +590,290 @@
 
         // --- JavaScript untuk Navigasi Mobile (Burger Menu Pop-up) ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
         const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.add('active');
-            document.body.style.overflowY = 'hidden'; // Nonaktifkan scroll saat menu aktif
         });
 
         closeMobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
-            document.body.style.overflowY = 'auto'; // Aktifkan kembali scroll
         });
 
         function closeMobileMenu() {
             mobileMenu.classList.remove('active');
-            document.body.style.overflowY = 'auto';
         }
 
-        // Tambahkan ini untuk event listener pada link di mobile menu
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
-        });
-
-        // --- Logic Game Dino ---
-        const canvas = document.getElementById('dinoGameCanvas');
-        const ctx = canvas.getContext('2d');
-        const mobileJumpButton = document.getElementById('mobileJumpButton');
-
-        // Ukuran Dino yang disesuaikan agar proporsional dengan canvas
-        const DINO_WIDTH = 25;
-        const DINO_HEIGHT = 40; // Disesuaikan agar tidak terlalu lonjong
-
-        let dino = {
-            x: 50,
-            y: canvas.height - DINO_HEIGHT, // Posisi awal dino
-            width: DINO_WIDTH,
-            height: DINO_HEIGHT,
-            velocityY: 0,
-            gravity: 0.5,
-            isJumping: false,
-            draw: function() {
-                ctx.fillStyle = 'green'; // Warna dino
-                ctx.fillRect(this.x, this.y, this.width, this.height);
-            },
-            jump: function() {
-                if (!this.isJumping) {
-                    this.velocityY = -10; // Kekuatan lompat
-                    this.isJumping = true;
-                }
-            },
-            update: function() {
-                this.y += this.velocityY;
-                this.velocityY += this.gravity;
-                if (this.y >= canvas.height - this.height) {
-                    this.y = canvas.height - this.height;
-                    this.velocityY = 0;
-                    this.isJumping = false;
-                }
-            }
-        };
-
-        let obstacles = [];
-        let score = 0;
-        let gameStarted = false;
-        let gameOver = false;
-        let animationFrameId;
-        let obstacleGenerationInterval; // Untuk menyimpan ID interval
-
-        function createObstacle() {
-            const obstacleWidth = 15;
-            const obstacleHeight = Math.random() * 20 + 20; // Ukuran rintangan bervariasi
-            obstacles.push({
-                x: canvas.width,
-                y: canvas.height - obstacleHeight,
-                width: obstacleWidth,
-                height: obstacleHeight,
-                speed: 3
-            });
-        }
-
-        function updateGame() {
-            if (!gameStarted || gameOver) return;
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height); // Bersihkan kanvas
-
-            dino.update();
-            dino.draw();
-
-            // Update dan gambar rintangan
-            for (let i = 0; i < obstacles.length; i++) {
-                let obs = obstacles[i];
-                obs.x -= obs.speed;
-                ctx.fillStyle = 'red'; // Warna rintangan
-                ctx.fillRect(obs.x, obs.y, obs.width, obs.height);
-
-                // Hapus rintangan yang keluar dari layar
-                if (obs.x + obs.width < 0) {
-                    obstacles.splice(i, 1);
-                    i--;
-                    score++; // Tambah skor
-                }
-
-                // Deteksi tabrakan
-                if (dino.x < obs.x + obs.width &&
-                    dino.x + dino.width > obs.x &&
-                    dino.y < obs.y + obs.height &&
-                    dino.y + dino.height > obs.y) {
-                    gameOver = true;
-                    // Hentikan interval pembuatan rintangan saat game over
-                    clearInterval(obstacleGenerationInterval); 
-                    alert(`Game Over! Score: ${score}. Press OK to restart.`);
-                    resetGame();
-                    return;
-                }
-            }
-
-            // Tampilkan skor
-            ctx.fillStyle = 'white';
-            ctx.font = '12px Poppins';
-            ctx.fillText(`Score: ${score}`, 10, 20);
-
-            animationFrameId = requestAnimationFrame(updateGame);
-        }
-
-        function startGame() {
-            if (!gameStarted) {
-                gameStarted = true;
-                gameOver = false;
-                score = 0;
-                obstacles = [];
-                dino.y = canvas.height - dino.height; // Reset posisi dino
-                dino.velocityY = 0;
-                dino.isJumping = false;
-                // Bersihkan kanvas dari teks instruksi awal
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                requestAnimationFrame(updateGame);
-                // Buat rintangan secara berkala
-                obstacleGenerationInterval = setInterval(createObstacle, 2000); // Setiap 2 detik
-            }
-        }
-
-        function resetGame() {
-            gameStarted = false;
-            gameOver = false;
-            if (animationFrameId) {
-                cancelAnimationFrame(animationFrameId);
-            }
-            if (obstacleGenerationInterval) { // Pastikan interval dihentikan saat reset
-                clearInterval(obstacleGenerationInterval);
-            }
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            // Gambar instruksi awal lagi
-            ctx.fillStyle = 'white';
-            ctx.font = '16px Poppins';
-            ctx.textAlign = 'center';
-            ctx.fillText("Click or press SPACE to start!", canvas.width / 2, canvas.height / 2);
-            ctx.textAlign = 'start'; // Kembalikan ke default agar skor tidak terpengaruh
-        }
-
-        // Event listener untuk keyboard (spasi)
-        document.addEventListener('keydown', (e) => {
-            if (e.code === 'Space') {
-                if (!gameStarted && !gameOver) {
-                    startGame();
-                } else if (gameStarted && !gameOver) {
-                    dino.jump();
-                }
-            }
-        });
-
-        // Event listener untuk klik pada canvas
-        canvas.addEventListener('click', () => {
-            if (!gameStarted && !gameOver) {
-                startGame();
-            } else if (gameStarted && !gameOver) {
-                dino.jump();
-            }
-        });
-
-        // Event listener untuk tombol jump di mobile
-        mobileJumpButton.addEventListener('click', () => {
-            if (!gameStarted && !gameOver) {
-                startGame();
-            } else if (gameStarted && !gameOver) {
-                dino.jump();
-            }
-        });
-
-        // Inisialisasi game saat halaman dimuat
-        window.addEventListener('load', () => {
-            // Atur ukuran canvas secara programatis jika belum diatur di CSS
-            // Ini akan memastikan canvas memiliki ukuran default yang benar sebelum media query bekerja
-            if (window.innerWidth < 768) {
-                canvas.width = 280;
-                canvas.height = 80;
-            } else {
-                canvas.width = 700;
-                canvas.height = 150;
-            }
-            // Perbarui posisi Y awal dino setelah ukuran canvas diatur
-            dino.y = canvas.height - dino.height; 
-            resetGame(); // Panggil resetGame untuk menampilkan instruksi awal
-        });
-
-        // Atur ulang ukuran canvas saat window diresize untuk responsif
-        window.addEventListener('resize', () => {
-            if (window.innerWidth < 768) {
-                canvas.width = 280;
-                canvas.height = 80;
-            } else {
-                canvas.width = 700;
-                canvas.height = 150;
-            }
-            dino.y = canvas.height - dino.height; // Sesuaikan posisi dino
-            resetGame(); // Reset game setelah resize
-        });
-
-        // Inisialisasi navbar blur
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
+        // Navbar blur on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header.classList.add('navbar-scrolled');
             } else {
                 header.classList.remove('navbar-scrolled');
             }
+        });
+
+        /* --- DINO GAME JAVASCRIPT --- */
+        const canvas = document.getElementById('dinoGameCanvas');
+        const ctx = canvas.getContext('2d');
+        const mobileJumpButton = document.getElementById('mobileJumpButton');
+
+        let dino;
+        let obstacles = [];
+        let score = 0;
+        let gameOver = false;
+        let gameStarted = false;
+        let animationFrameId;
+
+        // Game properties (responsive to canvas size)
+        let groundY;
+        let dinoSize;
+        let obstacleWidth;
+        let obstacleMaxHeight;
+        let gameSpeed; 
+
+        // Base values for speed and gravity, scaled by canvas height for responsiveness
+        // LOMPATAN LEBIH CEPAT DAN JATUH LEBIH RESPONSIF
+        const BASE_JUMP_SPEED = 0.065; 
+        const BASE_GRAVITY = 0.0035;    // Ditingkatkan lagi untuk jatuh lebih cepat (sebelumnya 0.0028)
+
+        // RINTANGAN LEBIH CEPAT DAN SERING (nilai tetap dari penyesuaian sebelumnya)
+        const INITIAL_GAME_SPEED_FACTOR = 0.015; 
+        const SPEED_INCREASE_PER_SCORE = 0.00008; 
+
+        function updateGameProperties() {
+            groundY = canvas.height - 10;
+            dinoSize = canvas.height * 0.3;
+            obstacleWidth = canvas.width * 0.05;
+            obstacleMaxHeight = canvas.height * 0.3; 
+            
+            gameSpeed = canvas.width * INITIAL_GAME_SPEED_FACTOR; 
+
+            if (dino) {
+                dino.y = groundY - dino.height;
+                dino.x = canvas.width * 0.1;
+                dino.width = dinoSize;
+                dino.height = dinoSize;
+            }
+        }
+
+        const DINO_COLOR = '#6366F1';
+
+        class Dino {
+            constructor() {
+                this.x = canvas.width * 0.1;
+                this.y = groundY - dinoSize;
+                this.width = dinoSize;
+                this.height = dinoSize;
+                this.velocityY = 0;
+                this.isJumping = false;
+            }
+
+            draw() {
+                ctx.fillStyle = DINO_COLOR;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+
+            update() {
+                if (this.isJumping) {
+                    this.y += this.velocityY;
+                    this.velocityY += (BASE_GRAVITY * canvas.height); 
+                    if (this.y >= groundY - this.height) {
+                        this.y = groundY - this.height;
+                        this.isJumping = false;
+                        this.velocityY = 0;
+                    }
+                }
+            }
+
+            jump() {
+                if (!this.isJumping) {
+                    this.isJumping = true;
+                    this.velocityY = -(BASE_JUMP_SPEED * canvas.height); 
+                }
+            }
+        }
+
+        class Obstacle {
+            constructor() {
+                this.x = canvas.width;
+                this.width = obstacleWidth;
+                this.height = Math.random() * (obstacleMaxHeight - 20) + 20; 
+                this.y = groundY - this.height;
+                this.color = '#fff';
+            }
+
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+
+            update() {
+                this.x -= gameSpeed; 
+            }
+        }
+
+        function startGame() {
+            if (gameStarted && !gameOver) {
+                return; 
+            }
+            gameStarted = true;
+            gameOver = false;
+            score = 0;
+            obstacles = [];
+            updateGameProperties(); 
+            dino = new Dino();
+            document.querySelector('.dino-game-container h4').innerText = "Playing Dino Game!";
+            document.querySelector('.dino-game-container p.instructions').innerText = "Score: 0";
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+            gameLoop();
+        }
+
+        function endGame() {
+            gameOver = true;
+            gameStarted = false; 
+            cancelAnimationFrame(animationFrameId);
+            document.querySelector('.dino-game-container h4').innerText = "Game Over!";
+            document.querySelector('.dino-game-container p.instructions').innerText = `Your Score: ${score}. Tap to Restart.`;
+        }
+
+        function drawScore() {
+            ctx.fillStyle = 'white';
+            ctx.font = '16px Poppins';
+            ctx.textAlign = 'right';
+            ctx.fillText(`Score: ${score}`, canvas.width - 10, 20);
+        }
+
+        function generateObstacles() {
+            let obstacleGenerationChance = 0.025; 
+            if (window.innerWidth < 768) { 
+                obstacleGenerationChance = 0.015; 
+            }
+
+            const lastObstacle = obstacles[obstacles.length - 1];
+            const minDistance = canvas.width * 0.3; 
+            const maxObstacles = 3; 
+
+            if (obstacles.length < maxObstacles && 
+                (!lastObstacle || (canvas.width - lastObstacle.x) > minDistance) &&
+                Math.random() < obstacleGenerationChance) {
+                obstacles.push(new Obstacle());
+            }
+        }
+
+        function detectCollision(dino, obstacle) {
+            return dino.x < obstacle.x + obstacle.width &&
+                   dino.x + dino.width > obstacle.x &&
+                   dino.y < obstacle.y + obstacle.height &&
+                   dino.y + dino.height > obstacle.y;
+        }
+
+        function gameLoop() {
+            if (gameOver) return;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#4B5563';
+            ctx.fillRect(0, groundY, canvas.width, canvas.height - groundY);
+
+            dino.update();
+            dino.draw();
+
+            generateObstacles();
+
+            for (let i = 0; i < obstacles.length; i++) {
+                let obs = obstacles[i];
+                obs.update();
+                obs.draw();
+
+                if (detectCollision(dino, obs)) {
+                    endGame();
+                    return;
+                }
+
+                if (obs.x + obs.width < 0) {
+                    obstacles.splice(i, 1);
+                    i--;
+                    score++;
+                    document.querySelector('.dino-game-container p.instructions').innerText = `Score: ${score}`;
+                    gameSpeed += SPEED_INCREASE_PER_SCORE * canvas.width; 
+                }
+            }
+
+            drawScore();
+
+            animationFrameId = requestAnimationFrame(gameLoop);
+        }
+
+        // --- Event Listener Utama untuk Input Game ---
+        canvas.addEventListener('touchstart', (e) => {
+            e.preventDefault(); 
+            handleGameInput(e);
+        }, { passive: false }); 
+
+        mobileJumpButton.addEventListener('click', handleGameInput);
+        mobileJumpButton.addEventListener('touchstart', (e) => {
+            e.preventDefault(); 
+            handleGameInput(e);
+        }, { passive: false });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault(); 
+                handleGameInput(e);
+            }
+        });
+
+        function handleGameInput(event) {
+            if (!gameStarted || gameOver) {
+                startGame();
+            } else {
+                dino.jump();
+            }
+        }
+
+        // Handle window resize for canvas responsiveness
+        window.addEventListener('resize', () => {
+            if (window.innerWidth < 768) { 
+                canvas.width = 280;
+                canvas.height = 80;
+            } else { 
+                canvas.width = 700;
+                canvas.height = 150;
+            }
+            updateGameProperties(); 
+            if (!gameStarted) {
+                ctx.fillStyle = '#000';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'white';
+                ctx.font = '20px Poppins';
+                ctx.textAlign = 'center';
+                ctx.fillText("Tap / Click to Start", canvas.width / 2, canvas.height / 2);
+            } else {
+                startGame(); 
+            }
+        });
+
+        // Initial draw when page loads
+        window.addEventListener('load', () => {
+            if (window.innerWidth < 768) {
+                canvas.width = 280;
+                canvas.height = 80;
+            } else {
+                canvas.width = 700;
+                canvas.height = 150;
+            }
+            updateGameProperties(); 
+            ctx.fillStyle = '#000'; 
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'white';
+            ctx.font = '20px Poppins';
+            ctx.textAlign = 'center';
+            ctx.fillText("Tap / Click to Start", canvas.width / 2, canvas.height / 2);
         });
     </script>
 </body>
