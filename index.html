@@ -3,246 +3,746 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-
-    
     <title>Portfolio | Febriant</title>
-</head>
-<body>
-     <div class="container">
-      <div id="particles-js"></div>
-     <nav id="header">
-        <div class="nav-logo">
-          <p class="nav-name">Brn</p>
-        </div>
-        <div class="nav-menu" id="myNavMenu">
-          <ul class="nav_menu_list">
-            <li class="nav_list">
-              <a href="#home" class="nav-link active-link">Home</a>
-              <div class="circle"></div>
-            </li>
-            <li class="nav_list">
-              <a href="#about" class="nav-link">About</a>
-              <div class="circle"></div>
-            </li>
-            <li class="nav_list">
-              <a href="#projects" class="nav-link">Projects</a>
-              <div class="circle"></div>
-            </li>
-            <li class="nav_list">
-              <a href="#contact" class="nav-link">Contact</a>
-              <div class="circle"></div>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-button">
-          <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
-        </div>
-      </nav>
 
-      
-     <main class="wrapper">
-  
-        <section class="featured-box" id="home">
-         <div class="featured-text">
-          <div class="featured-text-card">
-            <span>Febriant</span>
-          </div>
-          <div class="featured-name">
-            <p>I'm <span class="typedText"></span></p>
-          </div>
-          <div class="featured-text-info">
-            <p>Experienced frontend developer with a passion for creating visually stunning
-              and user-friendly websites.
-            </p>
-          </div>
-          <div class="featured-text-btn">
-            <button class="btn blue-btn" >About Me</button>
-            <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
-          </div>
-          <div class="social_icons">
-            <a href="https://www.instagram.com/bbriannt_/" target="_blank">
-              <div class="icon"><i class="uil uil-instagram"></i></div>
-            </a>
-            <a href="https://www.linkedin.com/in/febriant-sam-antonie-putra-elshandy-417901339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-              <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-            </a>
-            <a href="https://github.com/FEBRIANTSTAIN" target="_blank">
-              <div class="icon"><i class="uil uil-github-alt"></i></div>
-            </a>
-          </div>
-          
-         </div>
-         <div class="featured-image">
-          <div class="image">
-            <img src="images/favicon.svg" alt="avatar">
-          </div>
-         </div>
-        </section>
-      
-        <section class="section" id="about">
-         <div class="top-header">
-          <h1>About Me</h1>
-         </div>
-         <div class="row">
-          <div class="col">
-            <div class="about-info">
-              <h3>My introduction</h3>
-              <p>I'm a passionate student currently exploring the world of web development and design.
-                I love turning creative ideas into functional and visually appealing websites.
-                 Even though I'm still in school, I've been learning and building projects to sharpen my skills in HTML, CSS, and JavaScript. 
-                 My goal is to keep growing as a developer and bring innovative ideas to life.
-              </p>
-              <div class="about-btn">
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="skills-box">
-              <div class="skills-header">
-                <h3>Frontend</h3>
-              </div>
-              <div class="skills-list">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>Bootstrap</span>
-                <span>JavaScript</span>
-                <span>React</span>
-              </div>
-            </div>
-            <div class="skills-box">
-              <div class="skills-header">
-                <h3>Backend</h3>
-              </div>
-              <div class="skills-list">
-                <span>PHP</span>
-                <span>JAVA</span>
-                <span>C++</span>
-              </div>
-            </div>
-            <div class="skills-box">
-              <div class="skills-header">
-                <h3>Database</h3>
-              </div>
-              <div class="skills-list">
-                <span>MySQL</span>
-              </div>
-            </div>
-          </div>
-         </div>
-        </section>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    
+    <style>
+        /* Menggunakan font Poppins */
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden; /* Mencegah overflow horizontal */
+            overflow-y: hidden; /* Mencegah scroll awal saat splash screen aktif */
+        }
 
-        <section class="section" id="projects">
-         <div class="top-header">
-          <h1>Projects</h1>
-         </div>
-         <div class="project-container">
-          <div class="project-box">
-            <a href="https://github.com/FEBRIANTSTAIN/kasir-laravel" target="_blank">
-              <img src="images/portfolio-1.png" alt="Project 1" />
-            </a>
-            <h3>Backend Application Kasir</h3>
-          </div>
-          <div class="project-box">
-            <a href="https://web-movie-list.vercel.app/" target="_blank">
-              <img src="images/project2.png" alt="Project 2" />
-            </a>
-            <h3>Web List Movie</h3>
-          </div>
-          <div class="project-box">
-            <a href="https://simple-website-market-place.vercel.app/" target="_blank">
-              <img src="images/yushamarket.png" alt="Project 3" />
-            </a>
-            <h3>Web Market Place</h3>
-          </div>
-         
-         </div>
-        </section>
+        /* --- Splash Screen Styles Improved --- */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(17, 24, 39, 0.98); 
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; 
+            color: white;
+            font-size: 2rem; 
+            font-weight: 600; 
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out; 
+            user-select: none; 
+            text-align: center; 
+        }
+
+        #splash-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none; 
+        }
+
+        /* Gaya untuk teks "Portfolio" dengan gradient */
+        .gradient-text {
+            background: linear-gradient(to right, #6366F1, #8B5CF6); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; 
+            display: inline-block; 
+        }
+
+        /* Gaya untuk ikon GitHub di splash screen */
+        #splash-screen .github-icon {
+            font-size: 3rem; 
+            color: white; 
+            margin-top: 1rem; 
+            transition: transform 0.3s ease, color 0.3s ease; 
+        }
+
+        #splash-screen .github-icon:hover {
+            transform: scale(1.1); 
+            color: #6366F1; 
+        }
+
+        /* Responsivitas font size untuk splash screen */
+        @media (min-width: 768px) {
+            #splash-screen {
+                font-size: 3rem; 
+            }
+            #splash-screen .github-icon {
+                font-size: 4rem; 
+            }
+        }
+        /* --- End Splash Screen Styles --- */
+
+        /* Navbar Blur on Scroll */
+        .navbar-scrolled {
+            background-color: rgba(255, 255, 255, 0.1); 
+            backdrop-filter: blur(8px); 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+            transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* --- Perubahan untuk Mobile Menu Pop-up --- */
+        #mobile-menu {
+            position: fixed; 
+            top: 1rem; 
+            right: 1rem; 
+            width: 250px; 
+            background-color: rgba(17, 24, 39, 0.9); 
+            backdrop-filter: blur(8px); 
+            border-radius: 0.5rem; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+            padding: 1.5rem; 
+            z-index: 60; 
+            transform: translateX(110%); 
+            transition: transform 0.3s ease-out; 
+            opacity: 0; 
+            pointer-events: none; 
+        }
+
+        #mobile-menu.active {
+            transform: translateX(0); 
+            opacity: 1; 
+            pointer-events: auto; 
+        }
+
+        /* Pastikan mobile menu tidak terlihat di desktop */
+        @media (min-width: 768px) {
+            #mobile-menu {
+                display: none !important;
+            }
+        }
+        /* --- Akhir Perubahan untuk Mobile Menu Pop-up --- */
+
+        /* Penyesuaian untuk Project Section */
+        .project-grid {
+            display: grid;
+            gap: 24px; 
+            grid-template-columns: repeat(1, minmax(0, 1fr)); 
+            padding: 0 16px; 
+        }
         
+        /* Untuk project-box di mobile, atur lebar max-content agar tidak terlalu lebar */
+        .project-box {
+            width: 100%; 
+            max-width: 320px; 
+            justify-self: center; 
+        }
 
+        /* Breakpoint untuk tablet (md) */
+        @media (min-width: 768px) {
+            .project-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)); 
+                padding: 0; 
+            }
+        }
 
-        <section class="section" id="contact">
-         <div class="top-header">
-          <h1>Get in touch</h1>
-          <span>Do you have a project in your mind, contact me here</span>
-         </div>
-         <div class="row">
-          <div class="col">
-            <div class="contact-info">
-              <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-              <p><i class="uil uil-envelope"></i> Email: yannime20@gmail.com</p>
-              <p><i class="uil uil-phone"></i> No: 085812416250</p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-control">
-              <div class="form-inputs">
-                <input type="text" class="input-field" placeholder="Name">
-                <input type="text" class="input-field" placeholder="Email">
-              </div>
-              <div class="text-area">
-                <textarea placeholder="Message"></textarea>
-              </div>
-              <div class="form-button">
-                <button class="btn">Send <i class="uil uil-message"></i></button>
-              </div>
-            </div>
-          </div>
-         </div>
-        </section>
+        /* Breakpoint untuk desktop (lg) */
+        @media (min-width: 1024px) {
+            .project-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr)); 
+            }
+        }
 
-     </main>
+        /* Menghilangkan efek kedip pada foto dan border */
+        .profile-img-container .absolute {
+            animation: none !important; 
+            opacity: 0 !important; 
+        }
+        .profile-img-container {
+            border: none !important; 
+        }
 
+        /* Perbaikan input form contact */
+        .contact-form-input {
+            color: #E5E7EB; 
+            background-color: #1F2937; 
+            border-color: #374151; 
+            position: relative; 
+            z-index: 10; 
+        }
+        .contact-form-input::placeholder {
+            color: #9CA3AF; 
+        }
+        .contact-form-input:focus {
+            outline: none; 
+            border-color: #6366F1; 
+            box-shadow: 0 0 0 1px #6366F1; 
+        }
+        /* Penyesuaian responsif foto di mobile */
+        @media (max-width: 767px) {
+            .home-section-content {
+                padding-top: 2rem; 
+            }
+            .profile-img-container {
+                width: 180px; 
+                height: 180px; 
+                margin-bottom: 2rem; 
+            }
+            .text-center.md\:text-left.order-2.md\:order-1 {
+                margin-top: 0; 
+            }
+            .py-24 { 
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+            .text-4xl.md\:text-5xl { 
+                font-size: 2.5rem;
+            }
+            .text-lg { 
+                font-size: 1rem;
+            }
 
-     <footer>
-        <div class="top-footer">
-          <p>Febriant</p>
-        </div>
-        <div class="middle-footer">
-          <ul class="footer-menu">
-            <li class="footer_menu_list">
-              <a href="#home">Home</a>
-            </li>
-            <li class="footer_menu_list">
-              <a href="#about">About</a>
-            </li>
-            <li class="footer_menu_list">
-              <a href="#projects">Projects</a>
-            </li>
-            <li class="footer_menu_list">
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div class="social_icons">
-          <a href="https://www.instagram.com/bbriannt_/" target="_blank">
-            <div class="iconfoot"><i class="uil uil-instagram"></i></div>
-          </a>
-          <a href="https://www.linkedin.com/in/febriant-sam-antonie-putra-elshandy-417901339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-            <div class="iconfoot"><i class="uil uil-linkedin-alt"></i></div>
-          </a>
-          <a href="https://github.com/FEBRIANTSTAIN" target="_blank">
-            <div class="iconfoot"><i class="uil uil-github-alt"></i></div>
-          </a>
-        </div>
-        <div class="bottom-footer">
-          <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Febriant</a></p>
-        </div>
-     </footer>
+            /* --- Penyesuaian untuk Contact Section di Mobile --- */
+            .md\:grid.md\:grid-cols-2.md\:gap-12 > div:first-child {
+                margin-bottom: 2rem; 
+            }
+            /* --- Akhir Penyesuaian untuk Contact Section di Mobile --- */
+        }
 
+        /* Button Hover Animations */
+        .home-section-content button {
+            transition: all 0.3s ease; 
+        }
+
+        .home-section-content button:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+        }
+
+        .home-section-content button.border:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3); 
+        }
+
+        /* Skill Tag Interaction */
+        .flex-wrap > span {
+            transition: all 0.2s ease;
+        }
+
+        .flex-wrap > span:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4); 
+        }
+
+        /* DINO GAME STYLES (Canvas Version) */
+        .dino-game-container {
+            margin-top: 2rem; 
+            background-color: #1F2937; 
+            border-radius: 0.75rem; 
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #374151; 
+        }
+
+        .dino-game-container h4 {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem; /* Kurangi margin bawah */
+        }
+        
+        .dino-game-container p.instructions {
+            color: #9CA3AF;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        #dinoGameCanvas {
+            background-color: #000; /* Latar belakang hitam untuk game */
+            display: block; /* Menghilangkan margin ekstra */
+            border-radius: 0.5rem;
+            max-width: 100%; /* Pastikan responsif */
+            height: auto; /* Pastikan tinggi menyesuaikan */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Untuk tampilan mobile, canvas mungkin perlu ukuran yang lebih spesifik */
+        @media (max-width: 767px) {
+            #dinoGameCanvas {
+                width: 280px; /* Lebar yang lebih kecil untuk mobile */
+                height: 80px; /* Tinggi yang lebih kecil untuk mobile */
+            }
+        }
+        
+        /* Untuk desktop, canvas akan mengisi ruang yang tersedia */
+        /* Untuk desktop, canvas akan mengisi ruang yang tersedia */
+        @media (min-width: 768px) {
+            #dinoGameCanvas {
+                width: 700px; /* Lebar yang lebih besar untuk desktop */
+                height: 150px; /* Tinggi yang lebih besar untuk desktop */
+            }
+            .dino-game-container {
+                /* Di desktop, dino game akan mengambil seluruh lebar kolomnya */
+                grid-column: span 2; /* Agar canvas mengisi 2 kolom jika di dalam grid 2 kolom */
+                margin-top: 4rem; /* Sesuaikan margin atas agar tidak terlalu dekat dengan form */
+            }
+            .md\:grid.md\:grid-cols-2.md\:gap-12 {
+                grid-template-rows: auto auto; /* Sesuaikan baris untuk menampung game di bawah */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 font-poppins antialiased">
+    <div id="splash-screen">
+        <p>Welcome to my <span class="gradient-text">Portfolio</span></p>
+        <a href="https://github.com/FEBRIANTSTAIN" target="_blank" class="github-icon">
+            <i class="uil uil-github-alt"></i>
+        </a>
     </div>
-  
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script>
-      particlesJS.load('particles-js', 'particlesjs-config.json', function() {
-      console.log('callback - particles.js config loaded');
-      });
-    </script>
-</body>
 
-</html>
+    <div class="container relative w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="particles-js" class="fixed inset-0 w-full h-full z-[-1] will-change-transform"></div>
+
+        <nav id="header" class="fixed top-0 left-0 w-full bg-transparent z-50 py-4 transition-all duration-300 ease-in-out">
+            <div class="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
+                <a href="#" class="text-xl font-semibold text-white">Brn.</a>
+                <button class="md:hidden text-gray-300 hover:text-white focus:outline-none z-50" id="mobile-menu-button">
+                    <i class="uil uil-bars text-2xl"></i>
+                </button>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
+                </div>
+                <button class="hidden md:inline-flex items-center bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded-full transition-colors duration-300">
+                    Download CV <i class="uil uil-download-alt ml-2"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden"> 
+                <div class="flex justify-end p-4 pb-0">
+                    <button class="text-gray-300 hover:text-white focus:outline-none" id="close-mobile-menu">
+                        <i class="uil uil-times text-2xl"></i>
+                    </button>
+                </div>
+                <div class="flex flex-col items-start space-y-4 pt-2"> <a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300 w-full px-4 py-2 rounded-md hover:bg-gray-700" onclick="closeMobileMenu()">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300 w-full px-4 py-2 rounded-md hover:bg-gray-700" onclick="closeMobileMenu()">About</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300 w-full px-4 py-2 rounded-md hover:bg-gray-700" onclick="closeMobileMenu()">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300 w-full px-4 py-2 rounded-md hover:bg-gray-700" onclick="closeMobileMenu()">Contact</a>
+                    <button class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded-full transition-colors duration-300 mt-4">
+                        Download CV <i class="uil uil-download-alt ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="pt-20 px-4 sm:px-6 lg:px-8">
+            <section class="py-24 md:flex md:items-center md:justify-between flex-wrap home-section-content" id="home">
+                <div class="md:w-1/2 flex justify-center order-1 md:order-2 mb-8 md:mb-0">
+                    <div class="relative w-64 h-64 rounded-full overflow-hidden shadow-lg profile-img-container">
+                        <img src="images/logo.jpg" alt="avatar" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 rounded-full bg-indigo-500 opacity-20"></div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pr-16 text-center md:text-left order-2 md:order-1">
+                    <span class="bg-indigo-500 text-white py-1 px-3 rounded-full text-sm font-medium mb-4 inline-block">Hello, I'm</span>
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Febriant <span class="text-indigo-500">Elshandy</span></h1>
+                    <p class="text-lg text-gray-300 mb-8">A passionate student exploring the world of web development and design, eager to craft innovative and user-centric digital experiences.</p>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-center md:justify-start gap-4">
+                        <button class="bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-6 rounded-full transition-colors duration-300">About Me</button>
+                        <button class="inline-flex items-center bg-transparent border border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white font-medium py-3 px-6 rounded-full transition-colors duration-300">
+                            Download CV <i class="uil uil-download-alt ml-2"></i>
+                        </button>
+                    </div>
+                    <div class="flex justify-center md:justify-start mt-10 space-x-4">
+                        <a href="https://www.instagram.com/bbriannt_/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="uil uil-instagram text-xl"></i></a>
+                        <a href="https://www.linkedin.com/in/febriant-sam-antonie-putra-elshandy-417901339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="uil uil-linkedin-alt text-xl"></i></a>
+                        <a href="https://github.com/FEBRIANTSTAIN" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="uil uil-github-alt text-xl"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-24" id="about">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4">About Me</h2>
+                    <p class="text-gray-400">Know more about my journey and skills</p>
+                </div>
+                <div class="md:flex md:items-start md:gap-16">
+                    <div class="md:w-1/2">
+                        <h3 class="text-xl font-semibold text-white mb-4">My Introduction</h3>
+                        <p class="text-gray-300 mb-6">I'm a proactive student with a strong interest in both the creative and technical aspects of the web. My journey into web development has been driven by a desire to solve problems and build engaging digital experiences. While pursuing my studies, I've dedicated my time to mastering frontend technologies like HTML, CSS, and JavaScript, and exploring frameworks such as React. I am keen to apply my growing skills in real-world projects and collaborate with passionate teams.</p>
+                        <p class="text-gray-300">I believe in continuous learning and staying updated with the latest trends in the tech industry. My goal is to contribute meaningfully to innovative projects and evolve as a versatile and proficient web developer.</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-white mb-3">Frontend Skills</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">HTML</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">CSS</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">JavaScript</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">React</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">Tailwind CSS</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">Responsive Design</span>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-white mb-3">Backend & Database Skills</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">Node.js</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">Express.js</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">MySQL</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">MongoDB</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-3">Tools & Technologies</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">Git</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">GitHub</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">VS Code</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">npm</span>
+                                <span class="inline-block bg-gray-800 text-gray-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500 hover:text-white transition-colors duration-300">Postman</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            ---
+
+            <section class="py-24" id="projects">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4">My Projects</h2>
+                    <p class="text-gray-400">Explore some of the projects I've worked on</p>
+                </div>
+                <div class="project-grid">
+                    <div class="project-box bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
+                        <img src="images/portfolio-1.png" alt="DOND Project" class="w-full h-auto rounded-md mb-4 object-cover">
+                        <h3 class="text-xl font-semibold text-white mb-3">Backend Application Kasir</h3>
+                        <p class="text-gray-400 text-sm mb-4"></p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-indigo-300 text-xs px-2 py-1 rounded">PHP</span>
+                            <span class="bg-gray-700 text-indigo-300 text-xs px-2 py-1 rounded">Laravel</span>
+                            <span class="bg-gray-700 text-indigo-300 text-xs px-2 py-1 rounded">JavaScript</span>
+                        </div>
+                        <div class="flex justify-end space-x-3">
+                            <a href="#" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-sm flex items-center">
+                                Live Demo <i class="uil uil-external-link-alt ml-1"></i>
+                            </a>
+                            <a href="https://github.com/FEBRIANTSTAIN/kasir-laravel" target="_blank" class="text-gray-400 hover:text-white text-sm flex items-center">
+                                Code <i class="uil uil-github-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-box bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
+                        <img src="images/project2.png" alt="Project Placeholder" class="w-full h-auto rounded-md mb-4 object-cover">
+                        <h3 class="text-xl font-semibold text-white mb-3">Website List Movie</h3>
+                        <p class="text-gray-400 text-sm mb-4">Website List Movie Realtime</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-indigo-300 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-gray-700 text-indigo-300 text-xs px-2 py-1 rounded">Tailwind CSS</span>
+                            <span class="bg-gray-700 text-indigo-300 text-xs px-2 py-1 rounded">JavaScript</span>
+                        </div>
+                        <div class="flex justify-end space-x-3">
+                            <a href="https://web-movie-list.vercel.app" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-sm flex items-center">
+                                Live Demo <i class="uil uil-external-link-alt ml-1"></i>
+                            </a>
+                            <a href="https://github.com/FEBRIANTSTAIN/WebMovieList" target="_blank" class="text-gray-400 hover:text-white text-sm flex items-center">
+                                Code <i class="uil uil-github-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-box bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
+                        <img src="images/yushamarket.png" alt="Project Placeholder" class="w-full h-auto rounded-md mb-4 object-cover">
+                        <h3 class="text-xl font-semibold text-white mb-3">Marketplace</h3>
+                        <p class="text-gray-400 text-sm mb-4">Simple Marketplace with Tailwind</p><p class="text-gray-400 text-sm mb-4"></p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-indigo-300 text-xs px-2 py-1 rounded">Tailwind CSS</span>
+                        </div>
+                        <div class="flex justify-end space-x-3">
+                            <a href="https://simple-website-market-place.vercel.app" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-sm flex items-center">
+                                Live Demo <i class="uil uil-external-link-alt ml-1"></i>
+                            </a>
+                            <a href="https://github.com/FEBRIANTSTAIN/SimpleWebsiteMarketPlace" target="_blank" class="text-gray-400 hover:text-white text-sm flex items-center">
+                                Code <i class="uil uil-github-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            ---
+
+            <section class="py-24" id="contact">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4">Get in Touch</h2>
+                    <p class="text-gray-400">Have a project in mind? Let's collaborate!</p>
+                </div>
+                <div class="md:grid md:grid-cols-2 md:gap-12">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-4">Contact Information</h3>
+                        <p class="text-gray-300 mb-4"><i class="uil uil-envelope text-indigo-500 mr-2"></i> Email: yannime20@gmail.com</p>
+                        <p class="text-gray-300 mb-4"><i class="uil uil-phone text-indigo-500 mr-2"></i> Phone: 085812416250</p>
+                        <p class="text-gray-300 mb-6 md:mb-0"><i class="uil uil-map-marker text-indigo-500 mr-2"></i> Indonesia</p>
+                    </div>
+                    <div>
+                        <form class="space-y-4">
+                            <div>
+                                <input type="text" class="w-full rounded-lg py-3 px-4 focus:outline-none contact-form-input" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <input type="email" class="w-full rounded-lg py-3 px-4 focus:outline-none contact-form-input" placeholder="Your Email">
+                            </div>
+                            <div>
+                                <textarea class="w-full rounded-lg py-3 px-4 focus:outline-none contact-form-input" rows="4" placeholder="Your Message"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-6 rounded-full transition-colors duration-300">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="dino-game-container md:col-span-2"> 
+                        <h4>Feeling bored? Play a game!</h4>
+                        <p class="instructions">Click on the game area and press **SPACE** to jump/start.</p>
+                        <canvas id="dinoGameCanvas"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="py-12 text-center text-gray-400 border-t border-gray-800 mt-24">
+            <p>&copy; 2024 Febriant. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="https://www.instagram.com/bbriannt_/" target="_blank" class="hover:text-white"><i class="uil uil-instagram text-lg"></i></a>
+                <a href="https://www.linkedin.com/in/febriant-sam-antonie-putra-elshandy-417901339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="hover:text-white"><i class="uil uil-linkedin-alt text-lg"></i></a>
+                <a href="https://github.com/FEBRIANTSTAIN" target="_blank" class="hover:text-white"><i class="uil uil-github-alt text-lg"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <script>
+        // --- Inisialisasi Particles.js ---
+        document.addEventListener('DOMContentLoaded', () => {
+            particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+                console.log('callback - particles.js config loaded');
+            });
+        });
+
+        // --- Splash Screen Logic (Auto-fade out) ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const splashScreen = document.getElementById('splash-screen');
+            const body = document.body;
+
+            body.style.overflowY = 'hidden';
+
+            setTimeout(() => {
+                splashScreen.classList.add('hidden'); 
+                body.style.overflowY = 'auto'; 
+            }, 1500); 
+        });
+
+
+        // ScrollReveal configuration for scroll animations
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 800,
+            delay: 100
+        });
+
+        // Apply ScrollReveal animations to specific elements
+        ScrollReveal().reveal('.featured-text, .featured-image, .top-header',{ delay: 100 });
+        ScrollReveal().reveal('.about-info',{ delay: 200, origin: 'left' });
+        ScrollReveal().reveal('.skills-box',{ delay: 200, origin: 'right' });
+        ScrollReveal().reveal('.project-box',{ delay: 200, interval: 100 });
+        ScrollReveal().reveal('.contact-info, .form-control',{ delay: 200, origin: 'bottom' });
+
+        // --- JavaScript untuk Navigasi Mobile (Burger Menu Pop-up) ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('header'); 
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('active'); 
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active'); 
+            document.body.style.overflow = ''; 
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            mobileMenuButton.addEventListener('click', openMobileMenu);
+            closeMobileMenuButton.addEventListener('click', closeMobileMenu);
+            
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && mobileMenu.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+
+        // --- Navbar Blur on Scroll ---
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { 
+                header.classList.add('navbar-scrolled');
+            } else {
+                header.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Smooth scroll for navigation links 
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('dinoGameCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set canvas size (will be overridden by CSS media queries, but good defaults)
+            canvas.width = 600;
+            canvas.height = 150;
+
+            // Game variables
+            // Dino sekarang adalah kotak
+            let dino = { x: 50, y: canvas.height - 30, width: 20, height: 20, dy: 0, gravity: 0.9, jumpForce: 15, onGround: true };
+            let obstacles = [];
+            let gameSpeed = 5;
+            let score = 0;
+            let gameOver = false;
+            let gameStarted = false;
+
+            function drawDino() {
+                ctx.fillStyle = 'white'; // Dino adalah kotak putih
+                ctx.fillRect(dino.x, dino.y, dino.width, dino.height);
+            }
+
+            function drawObstacles() {
+                ctx.fillStyle = 'lime'; // Warna rintangan
+                obstacles.forEach(obstacle => {
+                    ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+                });
+            }
+
+            function drawInitialState() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawDino(); // Gambar dino pada posisi awal
+                ctx.fillStyle = 'white';
+                ctx.font = '20px Poppins';
+                ctx.textAlign = 'center';
+                ctx.fillText('Press SPACE to Start', canvas.width / 2, canvas.height / 2);
+            }
+
+            function update() {
+                if (gameOver || !gameStarted) return;
+
+                // Bersihkan kanvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Perbarui posisi dino
+                dino.y += dino.dy;
+                if (dino.y + dino.height + dino.dy >= canvas.height) {
+                    dino.y = canvas.height - dino.height;
+                    dino.dy = 0;
+                    dino.onGround = true;
+                } else {
+                    dino.dy += dino.gravity;
+                    dino.onGround = false;
+                }
+
+                // Hasilkan rintangan
+                if (Math.random() < 0.015 && obstacles.length < 3) { // Sesuaikan frekuensi kemunculan rintangan
+                    let obstacleWidth = Math.random() * 20 + 10;
+                    let obstacleHeight = Math.random() * 30 + 20;
+                    obstacles.push({ x: canvas.width, y: canvas.height - obstacleHeight, width: obstacleWidth, height: obstacleHeight });
+                }
+
+                // Perbarui rintangan
+                obstacles.forEach((obstacle, index) => {
+                    obstacle.x -= gameSpeed;
+
+                    // Hapus rintangan yang sudah melewati layar
+                    if (obstacle.x + obstacle.width < 0) {
+                        obstacles.splice(index, 1);
+                        score++; // Tingkatkan skor saat rintangan terlewati
+                    }
+
+                    // Deteksi tabrakan (simple AABB)
+                    if (dino.x < obstacle.x + obstacle.width &&
+                        dino.x + dino.width > obstacle.x &&
+                        dino.y < obstacle.y + obstacle.height &&
+                        dino.y + dino.height > obstacle.y) {
+                        gameOver = true;
+                        ctx.fillStyle = 'red';
+                        ctx.font = '20px Poppins';
+                        ctx.textAlign = 'center';
+                        ctx.fillText('Game Over! Score: ' + score, canvas.width / 2, canvas.height / 2);
+                        ctx.fillText('Press SPACE to Restart', canvas.width / 2, canvas.height / 2 + 30);
+                    }
+                });
+
+                // Gambar semua elemen
+                drawDino();
+                drawObstacles();
+
+                // Gambar skor
+                ctx.fillStyle = 'white';
+                ctx.font = '16px Poppins';
+                ctx.textAlign = 'left';
+                ctx.fillText('Score: ' + score, 10, 20);
+
+                requestAnimationFrame(update);
+            }
+
+            function restartGame() {
+                // Atur ulang posisi dan properti dino
+                dino = { x: 50, y: canvas.height - 30, width: 20, height: 20, dy: 0, gravity: 0.9, jumpForce: 15, onGround: true };
+                obstacles = [];
+                gameSpeed = 5;
+                score = 0;
+                gameOver = false;
+                gameStarted = true;
+                update();
+            }
+
+            // Event Listeners untuk kontrol game
+            document.addEventListener('keydown', e => {
+                if (e.code === 'Space') {
+                    if (!gameStarted) {
+                        restartGame();
+                    } else if (dino.onGround && !gameOver) {
+                        dino.dy = -dino.jumpForce;
+                        dino.onGround = false;
+                    } else if (gameOver) {
+                        restartGame();
+                    }
+                }
+            });
+
+            // Panggil drawInitialState saat pertama kali halaman dimuat untuk menampilkan dino dan instruksi
+            drawInitialState(); 
+        });
+    </script>
